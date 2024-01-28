@@ -10,10 +10,7 @@ const PORT = 8000;
 //middleWare for the JSON
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://adil:Nigar01@cluster0.v2scauy.mongodb.net/", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
+mongoose.connect("mongodb+srv://adil:Nigar01@cluster0.v2scauy.mongodb.net/").then(() => {
     console.log("Connected to MongoDB");
 }).catch((err) => {
     console.log("Error connetcing to MongoDB ", err);
