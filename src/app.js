@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotENV = require("dotenv");
+const contactRoutes = require("./routes/contactRoutes")
 
 //creating instance of express
 const app = express();
@@ -16,6 +17,9 @@ mongoose.connect("mongodb+srv://adil:Nigar01@cluster0.v2scauy.mongodb.net/").the
 }).catch((err) => {
     console.log("Error connetcing to MongoDB ", err);
 })
+
+//using contact routes
+app.use('/', contactRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
