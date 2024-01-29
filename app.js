@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotENV = require("dotenv");
-const contactRoutes = require("./routes/contactRoutes")
+const contactRoutes = require("./src/routes/contactRoutes")
 
 //creating instance of express
 const app = express();
